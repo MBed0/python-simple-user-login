@@ -1,0 +1,19 @@
+import getpass
+
+# Create Account
+user_name = input("Create a username: ")
+psw = getpass.getpass("Create a password: ")
+print("Your account has been successfully created!\n")
+
+# Login Account
+while True:
+    user_login = input("Enter your username: ")
+    if user_name == user_login:
+        psw_login = getpass.getpass("Enter your password: ")
+        if psw == psw_login:
+            print("Login successful! Welcome!")
+            break
+        else:
+            print("Incorrect password. Please try again.\n")
+    else:
+        print("Username not found. Please try again.\n")
